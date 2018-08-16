@@ -1345,8 +1345,8 @@ There is a broad spectrum of component testing techniques. They range from a “
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
 ```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -1373,8 +1373,8 @@ yarn add --dev enzyme @types/enzyme enzyme-adapter-react-16 @types/enzyme-adapte
 
 #### `src/setupTests.ts`
 ```ts
-import * as Enzyme from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 ```
@@ -1384,7 +1384,7 @@ Enzyme.configure({ adapter: new Adapter() });
 Now you can write a smoke test with it:
 
 ```ts
-import * as React from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
@@ -1400,7 +1400,7 @@ You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testi
 Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
 
 ```ts
-import * as React from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
